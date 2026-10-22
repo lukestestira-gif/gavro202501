@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "salonName": "GAVRO BARBER",
+    "heroTitle": "Dobar fade se vidi. Dobar barber se pamti.",
+    "heroSubtitle": "Precizno šišanje, fade i uređivanje brade. Izaberi uslugu, pogledaj slobodne termine i rezerviši online.",
+    "phone": "",
+    "address": "",
+    "instagram": "https://www.instagram.com/hairstyle_by_gavro/",
+    "accent": "#84b5f5",
+    "currency": "RSD",
+    "openingHours": "Pon–Sub 09:00–20:00 · Nedelja zatvoreno",
+    "aboutTitle": "Nije samo šišanje. To je tvoj ritual.",
+    "aboutText": "GAVRO je barber studio posvećen preciznom šišanju, čistim linijama i detaljima. Izaberi svoj stil i rezerviši termin bez nepotrebnog čekanja.",
+    "heroImage": "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=1800&q=82",
+    "appTitle": "GAVRO u džepu.",
+    "appText": "Sačuvaj GAVRO na početnom ekranu telefona. Brže otvaranje sajta, pregled termina i jednostavno zakazivanje."
+  },
+  "services": [
+    {
+      "id": "svc_mvjua1lk_f754bf3b",
+      "name": "Fade",
+      "description": "Precizan prelaz i završni styling.",
+      "duration": 40,
+      "price": 1200,
+      "active": true,
+      "cost": 0
+    },
+    {
+      "id": "svc_mvjuai1z_cfaf915c",
+      "name": "Uređivanje brade",
+      "description": "Oblikovanje brade i precizne konture.",
+      "duration": 20,
+      "price": 600,
+      "active": true,
+      "cost": 0
+    }
+  ],
+  "barbers": [
+    {
+      "photo": "https://images.unsplash.com/photo-1653875700329-a7c8aca94c95?auto=format&fit=crop&w=900&q=80",
+      "bio": "Precizno šišanje, fade i detaljan završni styling.",
+      "id": "barber_gavro",
+      "name": "Gavro",
+      "role": "Barber",
+      "initials": "G",
+      "color": "#84b5f5",
+      "workStart": "09:00",
+      "workEnd": "20:00",
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active": true
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal_1",
+      "title": "Clean Fade",
+      "caption": "Precizne konture i čist prelaz.",
+      "image": "/uploads/photo_mvjuax1t_0720cd12.jpg",
+      "barberId": "",
+      "active": true
+    },
+    {
+      "id": "gal_2",
+      "title": "Fresh Cut",
+      "caption": "Klasičan barber finish.",
+      "image": "/uploads/photo_mvjubfwu_65613497.jpg",
+      "barberId": "",
+      "active": true
+    },
+    {
+      "id": "gal_mvjubs7d_fa550c46",
+      "title": "Uređivanje brade",
+      "caption": "",
+      "image": "/uploads/photo_mvjubp7e_cd6c6d02.jpg",
+      "barberId": "barber_gavro",
+      "active": true
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk_mvjvtmu6_ec854433",
+      "createdAt": "2026-10-22T18:36:10.590Z",
+      "name": "dsadas",
+      "phone": "dasd232",
+      "note": "sadas323",
+      "serviceId": "svc_mvjua1lk_f754bf3b",
+      "serviceName": "Fade",
+      "barberId": "barber_gavro",
+      "barberName": "Gavro",
+      "date": "2026-10-23",
+      "time": "09:15",
+      "duration": 40,
+      "price": 1200,
+      "cost": 0,
+      "status": "cancelled",
+      "cancelTokenHash": "a1563fd763ce3a865c35d09d5e656e55ac7914a8b542eac3b4622d1cdefa92d3",
+      "cancelledAt": "2026-10-22T18:36:23.967Z"
+    }
+  ]
+}

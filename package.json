@@ -1,0 +1,18 @@
+{
+  "name": "gavro-barber-booking",
+  "version": "2.1.0",
+  "private": true,
+  "description": "GAVRO Barber booking website, admin panel and Supabase integration for Netlify",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check netlify/functions/api.js && node --check public/app.js && node --check public/admin.js",
+    "seed:supabase": "node scripts/seed-supabase.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "GAVRO BARBER",
+  "short_name": "GAVRO",
+  "description": "GAVRO Barber — online zakazivanje termina",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#110f0d",
+  "theme_color": "#84b5f5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

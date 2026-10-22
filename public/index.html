@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#110f0d">
+  <meta name="description" content="Premium barber studio - online zakazivanje, tim i galerija radova.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <title>GAVRO BARBER</title>
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a href="#home" class="brand"><span class="brand-mark">G</span><span id="brandName">GAVRO BARBER</span></a>
+    <nav class="desktop-nav"><a href="#services">Usluge</a><a href="#works">Radovi</a><a href="#barbers">Barber</a><a href="#booking">Zakazivanje</a><button type="button" class="nav-text-button" data-open-bookings>Moji termini</button></nav>
+    <div class="top-actions"><button class="install-mini js-install">↓ Aplikacija</button><a class="book-pill" href="#booking">Zakaži <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-photo" id="heroPhoto"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><i></i> BARBER STUDIO · GAVRO</div>
+          <h1 id="heroTitle">Dobar fade se vidi. Dobar barber se pamti.</h1>
+          <p id="heroSubtitle"></p>
+          <div class="hero-actions"><a class="btn-primary" href="#booking">Zakaži termin <span>↗</span></a><a class="btn-ghost" href="#works">Pogledaj radove</a></div>
+        </div>
+        <aside class="hero-info-card">
+          <span class="micro">DANAS</span>
+          <strong>Bez čekanja.</strong>
+          <p>Rezerviši tačno vreme i dođi kada je stolica spremna za tebe.</p>
+          <div><span id="openingHours"></span><span id="phone"></span></div>
+        </aside>
+      </div>
+      <div class="hero-marquee" aria-label="GAVRO barber usluge"><div class="marquee-track"><span>ŠIŠANJE <b>✦</b> UREĐIVANJE BRADE <b>✦</b> PRECIZNE LINIJE <b>✦</b> BEZ ČEKANJA <b>✦</b> SKIN FADE <b>✦</b> GAVRO BARBER <b>✦</b></span><span aria-hidden="true">ŠIŠANJE <b>✦</b> UREĐIVANJE BRADE <b>✦</b> PRECIZNE LINIJE <b>✦</b> BEZ ČEKANJA <b>✦</b> SKIN FADE <b>✦</b> GAVRO BARBER <b>✦</b></span></div></div>
+    </section>
+
+    <section id="services" class="section shell">
+      <div class="section-title"><span>01 / USLUGE</span><div><h2>Izaberi tretman.</h2><p>Jasna cena, vreme i slobodni termini. Bez poziva i čekanja.</p></div></div>
+      <div id="serviceGrid" class="service-grid"></div>
+    </section>
+
+    <section id="works" class="works-section">
+      <div class="shell section-title light"><span>02 / RADOVI</span><div><h2>Rezultat govori.</h2><p>Fade, tekstura, brada i clean-up iz naše stolice. Sve slike možeš menjati iz admin panela.</p></div></div>
+      <div class="shell"><div id="galleryGrid" class="gallery-grid"></div></div>
+    </section>
+
+    <section id="barbers" class="section shell">
+      <div class="section-title"><span>03 / TIM</span><div><h2>Izaberi svog barbera.</h2><p>Svaki barber ima svoj raspored, boju u admin kalendaru i profil na sajtu.</p></div></div>
+      <div id="barberGrid" class="barber-grid"></div>
+    </section>
+
+    <section id="booking" class="booking-section">
+      <div class="shell booking-heading"><span>04 / REZERVACIJA</span><h2>Stolica čeka.<br><em>Izaberi vreme.</em></h2><p>Prikazujemo samo termine koji su stvarno slobodni kod izabranog barbera.</p></div>
+      <div class="shell booking-shell">
+        <div class="booking-progress">
+          <button class="progress-step active" data-go="1"><span>1</span><b>Usluga</b></button>
+          <i></i><button class="progress-step" data-go="2"><span>2</span><b>Barber</b></button>
+          <i></i><button class="progress-step" data-go="3"><span>3</span><b>Termin</b></button>
+          <i></i><button class="progress-step" data-go="4"><span>4</span><b>Potvrda</b></button>
+        </div>
+
+        <div class="booking-layout">
+          <div class="booking-main">
+            <section class="booking-step-panel active" data-step="1">
+              <div class="booking-panel-head"><span>01</span><div><h3>Šta radimo?</h3><p>Izaberi jednu uslugu.</p></div></div>
+              <div id="bookingServices" class="choice-grid service-choice-grid"></div>
+              <div class="wizard-actions right"><button class="wizard-next" data-next="2" disabled>Nastavi <span>→</span></button></div>
+            </section>
+
+            <section class="booking-step-panel" data-step="2">
+              <div class="booking-panel-head"><span>02</span><div><h3>Ko te šiša?</h3><p>Izaberi svog barbera.</p></div></div>
+              <div id="bookingBarbers" class="choice-grid barber-choice-grid"></div>
+              <div class="wizard-actions"><button class="wizard-back" data-back="1">← Nazad</button><button class="wizard-next" data-next="3" disabled>Nastavi <span>→</span></button></div>
+            </section>
+
+            <section class="booking-step-panel" data-step="3">
+              <div class="booking-panel-head"><span>03</span><div><h3>Kada dolaziš?</h3><p>Zauzeti termini se ne prikazuju.</p></div></div>
+              <div class="date-picker-head"><strong>Datum</strong><label class="calendar-field">📅 <input id="dateInput" type="date"></label></div>
+              <div id="dateStrip" class="date-strip"></div>
+              <div class="slot-section"><div class="slot-head"><strong>Slobodno vreme</strong><span id="slotMeta"></span></div><div id="slotState" class="slot-state">Izaberi datum.</div><div id="timeSlots" class="time-groups"></div></div>
+              <div class="wizard-actions"><button class="wizard-back" data-back="2">← Nazad</button><button class="wizard-next" data-next="4" disabled>Nastavi <span>→</span></button></div>
+            </section>
+
+            <section class="booking-step-panel" data-step="4">
+              <div class="booking-panel-head"><span>04</span><div><h3>Potvrdi termin.</h3><p>Još ime i telefon.</p></div></div>
+              <form id="bookingForm" class="details-form">
+                <div class="two-col"><label>Ime i prezime<input id="nameInput" autocomplete="name" placeholder="Marko Marković" required></label><label>Telefon<input id="phoneInput" autocomplete="tel" inputmode="tel" placeholder="+381 6x xxx xxxx" required></label></div>
+                <label>Napomena <small>opciono</small><textarea id="noteInput" rows="4" placeholder="Npr. low fade, samo makaze gore..."></textarea></label>
+                <label class="consent"><input id="consentInput" type="checkbox" required><span>Potvrđujem izabrani termin.</span></label>
+                <p class="form-msg" id="formMsg"></p>
+                <div class="wizard-actions"><button class="wizard-back" type="button" data-back="3">← Nazad</button><button class="confirm-btn" type="submit">Rezerviši termin <span>↗</span></button></div>
+              </form>
+            </section>
+          </div>
+
+          <aside class="booking-summary-card">
+            <div class="summary-top"><span>TVOJ TERMIN</span><b id="summaryReady">Nije završeno</b></div>
+            <div class="summary-empty" id="summaryEmpty">Prvo izaberi uslugu.</div>
+            <div id="summaryContent" class="summary-content hidden">
+              <div class="summary-service"><div class="summary-icon">✂</div><div><small>USLUGA</small><strong id="summaryService">—</strong><span id="summaryDuration">—</span></div></div>
+              <div class="summary-row"><span>Barber</span><strong id="summaryBarber">—</strong></div>
+              <div class="summary-row"><span>Datum</span><strong id="summaryDate">—</strong></div>
+              <div class="summary-row"><span>Vreme</span><strong id="summaryTime">—</strong></div>
+              <div class="summary-total"><span>Ukupno</span><strong id="summaryPrice">—</strong></div>
+            </div>
+            <p class="summary-note">Termin se čuva tek kada klikneš „Rezerviši termin“.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-section shell">
+      <div class="app-copy"><span>05 / APLIKACIJA</span><h2 id="appTitle">GAVRO u džepu.</h2><p id="appText"></p><button class="btn-primary js-install">↓ Skini aplikaciju</button><small>Radi kao PWA · Android / iPhone · bez App Store-a</small></div>
+      <div class="phone-stage"><div class="phone"><div class="phone-notch"></div><div class="phone-screen"><div class="phone-brand">G</div><span>NEXT CUT</span><strong>Zakaži za<br>30 sekundi.</strong><div class="phone-slot">DANAS <b>15:30</b></div><div class="phone-slot">SUTRA <b>10:15</b></div><div class="phone-cta">ZAKAŽI ↗</div></div></div><div class="phone-glow"></div></div>
+    </section>
+
+    <section id="about" class="about-section"><div class="shell about-grid"><div><span>06 / O NAMA</span><h2 id="aboutTitle"></h2></div><div><p id="aboutText"></p><div class="about-meta"><div><small>ADRESA</small><strong id="address"></strong></div><div><small>INSTAGRAM</small><a id="instagram" href="https://www.instagram.com/hairstyle_by_gavro/" target="_blank" rel="noopener noreferrer">@hairstyle_by_gavro</a></div></div></div></div></section>
+  </main>
+
+  <footer class="footer shell"><div class="brand"><span class="brand-mark">G</span><span id="footerName">GAVRO BARBER</span></div><p>Rezervacija bez čekanja. Stil bez kompromisa.</p><div><a href="#booking">Zakaži</a><a href="/admin">Admin</a></div></footer>
+
+  <nav class="mobile-nav"><a href="#home"><span>⌂</span>Početna</a><a href="#works"><span>▦</span>Radovi</a><a href="#booking" class="mobile-book"><span>✂</span>Zakaži</a><a href="#barbers"><span>♟</span>Barber</a><a href="#my-bookings" data-open-bookings><span>◷</span>Termini</a></nav>
+
+  <div id="successModal" class="modal-layer hidden"><div class="success-card"><div class="success-check">✓</div><span>TERMIN JE REZERVISAN</span><h3>Vidimo se uskoro.</h3><p id="successText"></p><div id="successDetails" class="success-details"></div><div class="success-actions"><button id="successMyBookings" class="btn-ghost" type="button">Moji termini</button><button id="successClose" class="btn-primary" type="button">Završi</button></div></div></div>
+  <div id="myBookingsModal" class="modal-layer hidden"><div class="my-bookings-card"><button class="modal-x" id="myBookingsClose" aria-label="Zatvori">×</button><span class="modal-kicker">GAVRO BARBER</span><h3>Moji termini.</h3><p class="my-bookings-intro">Ovde vidiš rezervacije sačuvane na ovom uređaju. Ako obrišeš podatke browsera ili promeniš uređaj, rezervacije možda neće biti prikazane.</p><div id="myBookingsList" class="my-bookings-list"></div><button type="button" class="btn-ghost" id="myBookingsDone">Zatvori</button></div></div>
+  <div id="installModal" class="modal-layer hidden"><div class="install-card"><button class="modal-x" id="installClose">×</button><div class="app-icon">G</div><span>GAVRO APP</span><h3>Dodaj na početni ekran.</h3><p id="installHelp">Ako browser ne pokaže automatsku instalaciju, otvori meni browsera i izaberi „Add to Home Screen“ / „Install app“.</p><button class="btn-primary" id="installTry">Instaliraj</button></div></div>
+  <div id="lightbox" class="modal-layer hidden"><button class="lightbox-close" id="lightboxClose">×</button><img id="lightboxImage" alt="Barber rad"><div><strong id="lightboxTitle"></strong><span id="lightboxMeta"></span></div></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
